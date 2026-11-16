@@ -1,12 +1,19 @@
 <script setup>
 import { ref } from 'vue';
 import AddRecepies from './components/AddRecepies.vue';
+import { recipeData } from './data/recepieData.js';
+import Recepie from './classes/Recepie.js';
 
 
 
 const recepies = ref([]);
 
-const addRecepie = (r) =>{
+
+for (let i = 0; i < recipeData.length; i++) {
+    var r = recipeData[i]
+    recepies.value.push(new Recepie(r.name, r.desc, r.time, r.difficulty, r.picture))
+}
+const addRecepie = (r) => {
     recepies.value.push(r)
 }
 </script>
@@ -26,13 +33,15 @@ const addRecepie = (r) =>{
     </header>
     <main>
         <section>
-           
+
         </section>
     </main>
 
     <footer>
-        <AddRecepies @add="addRecepie"/>
+        <AddRecepies @add="addRecepie" />
     </footer>
+
+    
 </template>
 <style scoped>
 .zold {
