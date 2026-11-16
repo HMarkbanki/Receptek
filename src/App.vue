@@ -3,7 +3,9 @@ import { ref } from 'vue';
 
 
 
-const recepies = ref
+const recepies = ref([]);
+
+
 </script>
 
 <template>
