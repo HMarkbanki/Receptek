@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import AddRecepies from './components/AddRecepies.vue';
 
 
 
@@ -24,7 +25,7 @@ const recepies = ref([]);
 
     </main>
     <footer>
-
+        <AddRecepies/>
     </footer>
 </template>
 <style scoped>
