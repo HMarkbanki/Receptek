@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from 'vue';
-import ListRecepies from './components/ListRecepies.vue';
-import SearchBar from './components/SearchBar.vue';
+
 
 
 const recepies = ref([]);
 
+const addRecepie = (r) =>{
+    recepies.value.push(r)
+}
 </script>
 
 <template>
@@ -21,16 +23,16 @@ const recepies = ref([]);
     <header class="p-5">
         <h1 class="fw-bold">Mit főzzünk ma?</h1>
     </header>
-    <main class="p-5">
-        <SearchBar />
-        <ListRecepies />
+    <main>
+        
     </main>
-    <footer>
 
+    <footer>
+        <AddRecepies @add="addRecepie"/>
     </footer>
 </template>
 <style scoped>
-.zold{
+.zold {
     background-color: #3f8c67;
     color: #fff;
     padding: 4px 10px;
