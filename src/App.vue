@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue';
+import SearchBar from './components/SearchBar.vue';
+import ListRecepies from './components/ListRecepies.vue';
 
 
 
@@ -24,7 +26,8 @@ const addRecepie = (r) =>{
         <h1 class="fw-bold">Mit főzzünk ma?</h1>
     </header>
     <main>
-        
+        <SearchBar />
+        <ListRecepies />
     </main>
 
     <footer>
