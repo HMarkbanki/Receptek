@@ -18,10 +18,10 @@ const recepies = ref([]);
         </div>
     </nav>
     <header>
-
+        <h1 class="fw-bold">Mit főzzünk ma?</h1>
     </header>
     <main>
-
+        
     </main>
     <footer>
 
