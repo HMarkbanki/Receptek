@@ -1,4 +1,10 @@
 <script setup>
+import { ref } from 'vue';
+
+
+
+const recepies = ref([]);
+
 
 
 
