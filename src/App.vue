@@ -6,6 +6,9 @@ import AddRecepies from './components/AddRecepies.vue';
 
 const recepies = ref([]);
 
+const addRecepie = (r) =>{
+    recepies.value.push(r)
+}
 </script>
 
 <template>
@@ -22,14 +25,17 @@ const recepies = ref([]);
         <h1 class="fw-bold">Mit főzzünk ma?</h1>
     </header>
     <main>
-        
+        <section>
+           
+        </section>
     </main>
+
     <footer>
-        <AddRecepies/>
+        <AddRecepies @add="addRecepie"/>
     </footer>
 </template>
 <style scoped>
-.zold{
+.zold {
     background-color: #3f8c67;
     color: #fff;
     padding: 4px 10px;
